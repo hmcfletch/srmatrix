@@ -1,3 +1,1 @@
-module Srmatrix
-  # Your code goes here...
-end
+require 'srmatrix/s_r_matrix'
