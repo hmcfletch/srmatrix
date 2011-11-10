@@ -36,7 +36,7 @@ module SRMatrixHelpers
           h[i] = j unless j == 0 || j.nil?
         end
         h
-      when Vector
+      when SRVector
         h = {}
         obj.to_a.each_with_index { |j,i| h[i] = j unless j == 0 || j.nil? }
         h

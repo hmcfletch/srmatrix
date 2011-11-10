@@ -53,6 +53,19 @@ module SRMatrixStorage
           end
         end
         return self.class.new(data)
+      when SRMatrixStorage::Base
+        raise "ErrDimensionMismatch" if column_size != m.row_size
+
+        data = Array.new(row_size) do |i|
+          Array.new(m.column_size) do |j|
+            (0 ... column_size).inject(0) do |vij, k|
+              vij + self[i,k] * m[k,j]
+            end
+          end
+        end
+        return self.class.new(data)
+      else
+        raise "No match found. Don't know how to multiply."
       end
     end
 
