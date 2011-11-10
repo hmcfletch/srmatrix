@@ -8,7 +8,7 @@ module SRMatrixStorage
     attr_reader :column_size
 
     def to_s; self.data.to_s end
-    def storage_name; self.class.to_s end
+    def storage_name; self.class.to_s.sub('SRMatrixStorage::','') end
 
     def sparse?
       raise "NOT IMPLEMENTED"
