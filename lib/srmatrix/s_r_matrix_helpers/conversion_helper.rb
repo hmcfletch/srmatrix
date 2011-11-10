@@ -8,7 +8,7 @@ module SRMatrixHelpers
       case obj
       when Array
         copy ? obj.dup : obj
-      when Vector
+      when SRVector
         obj.to_a
       else
         begin

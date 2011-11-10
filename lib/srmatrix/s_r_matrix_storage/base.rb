@@ -1,7 +1,7 @@
 module SRMatrixStorage
   class Base
 
-    extend ::SRMatrixHelpers::ConversionHelper
+    include ::SRMatrixHelpers::ConversionHelper
 
     attr_reader :data
     attr_reader :row_size

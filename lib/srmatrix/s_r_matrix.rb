@@ -7,7 +7,9 @@ class SRMatrix
   end
 
   def initialize(data, storage_arg=:dense)
-    @storage = if storage_arg == :dense
+    @storage = if data.is_a?(SRMatrixStorage::Base)
+      data
+    elsif storage_arg == :dense
       SRMatrixStorage::DenseStorage.new(data)
     elsif storage_arg == :dok
       SRMatrixStorage::SparseStorage::DOK.new(data)
@@ -46,4 +48,7 @@ class SRMatrix
     "SRMatrix[#{self.storage.storage_name}]:#{self.storage.to_s}"
   end
 
+  def *(m)
+    return self.class.new(self.storage * m)
+  end
 end
