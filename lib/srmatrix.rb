@@ -1,1 +1,16 @@
+require 'srmatrix/s_r_matrix_helpers/conversion_helper'
+
 require 'srmatrix/s_r_matrix'
+require 'srmatrix/s_r_matrix_storage/base'
+require 'srmatrix/s_r_matrix_storage/dense_storage'
+require 'srmatrix/s_r_matrix_storage/sparse_storage/base'
+require 'srmatrix/s_r_matrix_storage/sparse_storage/c_s_c'
+require 'srmatrix/s_r_matrix_storage/sparse_storage/c_s_r'
+require 'srmatrix/s_r_matrix_storage/sparse_storage/d_o_k'
+
+require 'srmatrix/s_r_vector'
+require 'srmatrix/s_r_vector_storage/base'
+require 'srmatrix/s_r_vector_storage/dense_storage'
+require 'srmatrix/s_r_vector_storage/sparse_storage/base'
+require 'srmatrix/s_r_vector_storage/sparse_storage/c_s_c'
+require 'srmatrix/s_r_vector_storage/sparse_storage/d_o_k'
